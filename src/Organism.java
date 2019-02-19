@@ -21,11 +21,12 @@ public class Organism {
     this.energylevel++;
   }
 
-  public void decrementEnergy() throws Exception {
+  public void decrementEnergy() {
     if (this.energylevel >= 1) {
       this.energylevel--;
     } else {
-      throw new Exception("Energy cannot be decremented below 0");
+      this.energylevel = 0;
+      //throw new Exception("Energy cannot be decremented below 0");
       // note for future: make it impossible to decrement below 0 instead?
     } // else
   } // decrementEnergy

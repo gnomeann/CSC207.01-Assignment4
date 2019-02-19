@@ -1,4 +1,3 @@
-
 public class Cooperator extends Organism {
 
   // Constructors
@@ -27,6 +26,11 @@ public class Cooperator extends Organism {
   @Override
   public boolean cooperates() {
     return true;
+  }
+  
+  @Override
+  public void update() {
+    this.incrementEnergy();
   }
   
 }
